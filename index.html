@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hue Control</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="module" src="main.js"></script>
+</head>
+
+<body>
+	<main>
+		<form name="device">
+			<fieldset name="connection">
+				<legend>Pair a Philips Hue bulb</legend>
+				<table>
+					<thead>
+						<tr>
+							<th><button name="pair">Pair</button></th>
+							<th>Model</th>
+							<th>Firmware Version</th>
+							<th>Manufacturer</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><button name="dc" disabled>Disconnect</button></th>
+							<td><input name="model" type="text" disabled placeholder="Unknown"></output></td>
+							<td><input name="fw" type="text" disabled placeholder="Unknown"></output></td>
+							<td><input name="manufacturer" type="text" disabled placeholder="Unknown"></output></td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+			<fieldset name="control" disabled>
+				<legend>Control</legend>
+				<table>
+					<tbody>
+						<tr>
+							<th>Power</th>
+							<td><input name="power" type="checkbox"></td>
+						</tr>
+						<tr>
+							<th>Brightness</th>
+							<td><input name="bright" min="1" max="254" type="range"></td>
+						</tr>
+						<tr>
+							<th>Temperature</th>
+							<td><input name="temp" min="1" max="244" type="range"></td>
+						</tr>
+						<tr>
+							<th>Color</th>
+							<td><input name="color" type="color"></td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+	</main>
+</body>
+
+</html>
