@@ -11,22 +11,24 @@
 	<main>
 		<form name="device">
 			<fieldset name="connection">
-				<legend>Pair a Philips Hue bulb</legend>
+				<legend>Pair</legend>
+				<p>This has only been tested against a Philips Hue LCA009 at firmware 1.122.2</p>
 				<table>
 					<thead>
 						<tr>
 							<th><button name="pair">Pair</button></th>
 							<th>Model</th>
-							<th>Firmware Version</th>
+							<th>Firmware</th>
 							<th>Manufacturer</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th><button name="dc" disabled>Disconnect</button></th>
+							<td><button name="identify" disabled>Identify</button></td>
 							<td><input name="model" type="text" disabled placeholder="Unknown"></output></td>
 							<td><input name="fw" type="text" disabled placeholder="Unknown"></output></td>
 							<td><input name="manufacturer" type="text" disabled placeholder="Unknown"></output></td>
+							<td><button name="disconnect" disabled>Disconnect</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -41,15 +43,27 @@
 						</tr>
 						<tr>
 							<th>Brightness</th>
-							<td><input name="bright" min="1" max="254" type="range"></td>
+							<td><input name="bright" type="range" min="1" max="254" placeholder="254"></td>
 						</tr>
 						<tr>
 							<th>Temperature</th>
-							<td><input name="temp" min="1" max="244" type="range"></td>
+							<td><input name="temp" type="range" min="1" max="244" placeholder="1"></td>
 						</tr>
 						<tr>
 							<th>Color</th>
-							<td><input name="color" type="color"></td>
+							<td><input name="color" type="color" value="#0000ff"></td>
+						</tr>
+						<tr>
+							<th>Animation</th>
+							<td>
+								<select name="animation">
+									<option selected value="0">None</option>
+									<option value="1">Candle</option>
+									<option value="2">Fireplace</option>
+									<option value="3">Hue Rotate</option>
+								</select>
+								<input name="speed" type="range" min="0" max="255" value="128">
+							</td>
 						</tr>
 					</tbody>
 				</table>
